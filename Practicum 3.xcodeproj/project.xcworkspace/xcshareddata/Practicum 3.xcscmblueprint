@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AA5714496DFF1E6822906AF3ECD1135A66E22307",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2D2EC495CAE5C364632594A4432A3F6DF4AD5C2C" : 0,
+    "AA5714496DFF1E6822906AF3ECD1135A66E22307" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3412C154-9888-4EF5-BBC8-176472EFF6CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2D2EC495CAE5C364632594A4432A3F6DF4AD5C2C" : "",
+    "AA5714496DFF1E6822906AF3ECD1135A66E22307" : "Practicum%203\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Practicum 3",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Practicum 3.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JoJo-Bear\/Ov-notifier.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D2EC495CAE5C364632594A4432A3F6DF4AD5C2C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JoJo-Bear\/Practicum-3.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA5714496DFF1E6822906AF3ECD1135A66E22307"
+    }
+  ]
+}

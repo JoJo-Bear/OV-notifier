@@ -10,14 +10,25 @@ import UIKit
 import Alamofire
 import SWXMLHash
 
+
 class GoodNameLikeTableViewController: UITableViewController {
     
+    @IBOutlet weak var textveld: UITextField!
     @IBOutlet var ovTableView: UITableView!
+    
+    @IBAction func textchange(sender: AnyObject) {
+        treinen = []
+        loadXMLData()
+        
+    }
+
     
     var treinen = [treininfo]()
     
     func loadXMLData()
     {
+        
+        
         let user = "joeygeraeds@msn.com"
         let password = "VeZuTWdrv0ma9Ygx16yJS1VjUP-_uPfHIPR6NWHJcmFOf7fFCUEZTw"
         
@@ -25,9 +36,10 @@ class GoodNameLikeTableViewController: UITableViewController {
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
-       
         
-        Alamofire.request(.GET, "http://webservices.ns.nl/ns-api-avt?station=ut", headers: headers).response { (request, response, data, error) in
+        
+        
+        Alamofire.request(.GET, "http://webservices.ns.nl/ns-api-avt?station=\(textveld.text!)", headers: headers).response { (request, response, data, error) in
                 print(data) // if you want to check XML data in debug window.
                 var xml = SWXMLHash.parse(data!)
             

@@ -13,18 +13,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="JZe-Ye-S77">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zoek op station" textAlignment="natural" minimumFontSize="17" id="xOa-Ek-t5C">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="1OT-3h-afS" id="JwW-vZ-a94"/>
+                                <action selector="textchange:" destination="1OT-3h-afS" eventType="editingChanged" id="KuK-uK-WPd"/>
                             </connections>
-                        </searchBar>
+                        </textField>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="NtY-2m-AOz">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NtY-2m-AOz" id="aQO-HY-3uK">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -45,19 +46,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ovTableView" destination="Yf1-3V-rWR" id="4pM-dc-vV9"/>
-                        <outlet property="searchDisplayController" destination="djP-pE-OXy" id="DMK-65-Xbj"/>
+                        <outlet property="textveld" destination="xOa-Ek-t5C" id="yQC-Ko-kYy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kI-YW-MYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="djP-pE-OXy">
-                    <connections>
-                        <outlet property="delegate" destination="1OT-3h-afS" id="PqO-KE-v47"/>
-                        <outlet property="searchBar" destination="JZe-Ye-S77" id="fTX-u2-lzw"/>
-                        <outlet property="searchContentsController" destination="1OT-3h-afS" id="4Cb-OU-isP"/>
-                        <outlet property="searchResultsDataSource" destination="1OT-3h-afS" id="UqV-oV-HBS"/>
-                        <outlet property="searchResultsDelegate" destination="1OT-3h-afS" id="f54-Bw-Xjq"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1003.5" y="604.5"/>
         </scene>
