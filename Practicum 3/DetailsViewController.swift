@@ -14,6 +14,9 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var Eindbestemming: UILabel!
     
+    
+    @IBOutlet weak var route: UILabel!
+    
     @IBOutlet weak var Spoor: UILabel!
     
     @IBOutlet weak var trein: UILabel!
@@ -30,7 +33,7 @@ class DetailsViewController: UIViewController {
         self.trein.text = self.selectedTrein?.trein
         self.vertraging.text = self.selectedTrein?.vertraging
         self.vertrektijd.text = self.selectedTrein?.vertrektijd
-        
+        self.route.text = self.selectedTrein?.route
         
         // Do any additional setup after loading the view.
     }

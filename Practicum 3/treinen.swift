@@ -15,14 +15,16 @@ class treininfo{
     var bestemming: String
     var vertraging: String
     var trein: String
+    var route: String
     
-    init(spoor: String, vertrektijd: String, bestemming: String, vertraging: String, trein: String){
+    init(spoor: String, vertrektijd: String, bestemming: String, vertraging: String, trein: String, route: String){
     
         self.trein = trein
         self.spoor = spoor
         self.vertrektijd = vertrektijd
         self.bestemming = bestemming
         self.vertraging = vertraging
+        self.route = route
         
     }
     

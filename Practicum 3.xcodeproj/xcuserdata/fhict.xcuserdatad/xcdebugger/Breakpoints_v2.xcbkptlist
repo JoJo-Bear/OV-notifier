@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Practicum 3/GoodNameLikeTableViewController.swift"
-            timestampString = "467209821.573616"
+            timestampString = "467288971.977365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "loadXMLData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Practicum 3/GoodNameLikeTableViewController.swift"
-            timestampString = "467209821.573616"
+            timestampString = "467288971.977365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "loadXMLData()"
             landmarkType = "5">
          </BreakpointContent>

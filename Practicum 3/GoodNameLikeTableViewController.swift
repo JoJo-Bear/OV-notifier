@@ -13,10 +13,12 @@ import SWXMLHash
 
 class GoodNameLikeTableViewController: UITableViewController {
     
+    
     @IBOutlet weak var textveld: UITextField!
     @IBOutlet var ovTableView: UITableView!
     
     @IBAction func textchange(sender: AnyObject) {
+        
         treinen = []
         loadXMLData()
         
@@ -37,13 +39,16 @@ class GoodNameLikeTableViewController: UITableViewController {
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
+        var link = textveld.text!.stringByReplacingOccurrencesOfString(" ", withString: "")
+        print(link)
         
-        
-        Alamofire.request(.GET, "http://webservices.ns.nl/ns-api-avt?station=\(textveld.text!)", headers: headers).response { (request, response, data, error) in
+        Alamofire.request(.GET, "http://webservices.ns.nl/ns-api-avt?station=\(link)", headers: headers).response { (request, response, data, error) in
                 print(data) // if you want to check XML data in debug window.
                 var xml = SWXMLHash.parse(data!)
             
             var vertraagd: String
+            var spoor: String
+            var route: String
             
             for elem in xml["ActueleVertrekTijden"]["VertrekkendeTrein"]{
                 if elem["VertrekVertragingTekst"].element?.text == nil{
@@ -52,7 +57,18 @@ class GoodNameLikeTableViewController: UITableViewController {
                 else{
                     vertraagd = elem["VertrekVertragingTekst"].element!.text!
                 
-                    
+                }
+                if elem["VertrekSpoor"].element?.text == nil{
+                    spoor = "Geen"
+                }
+                else{
+                    spoor = elem["VertrekSpoor"].element!.text!
+                }
+                if elem["RouteTekst"].element?.text == nil{
+                    route = "Geen stop"
+                }
+                else{
+                    route = elem["RouteTekst"].element!.text!
                 }
                 var timestring = elem["VertrekTijd"].element!.text!
                 var timesplit = timestring.componentsSeparatedByString("T")
@@ -60,14 +76,15 @@ class GoodNameLikeTableViewController: UITableViewController {
                 var tijd = time[0]
                 
                 var newTrein = treininfo(
-                    spoor: elem["VertrekSpoor"].element!.text!,
+                    spoor: spoor,
                     vertrektijd: tijd,
                     bestemming: elem["EindBestemming"].element!.text!,
                     vertraging: vertraagd,
-                    trein: elem["TreinSoort"].element!.text!
+                    trein: elem["TreinSoort"].element!.text!,
+                    route: route
                 )
                 self.treinen.append(newTrein);
-                print(elem["EindBestemming"].element!.text!)
+                print(elem)
                 
             }
             
